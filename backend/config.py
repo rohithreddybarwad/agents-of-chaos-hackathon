@@ -8,6 +8,16 @@ from pathlib import Path
 BACKEND_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BACKEND_DIR.parent
 
+# Load a .env file if present (deploy bundles one next to the app). Env vars that
+# are already set (e.g. Fly secrets, org secrets) take precedence.
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(BACKEND_DIR / ".env")
+    load_dotenv(REPO_ROOT / ".env")
+except ImportError:
+    pass
+
 
 def _resolve_asset_dir(name: str) -> Path:
     """Locate an asset dir either bundled in /backend (deploy) or at repo root (dev)."""
