@@ -5,7 +5,7 @@
 ## What we're building
 The Mirror: a habit/accountability coach agent. A person states one real, big life goal. Each day they send a short text check-in. The agent holds the FULL history of past check-ins and reasons over all of it - not just today's message - to spot real, evidence-backed patterns (repeated excuses, drift from the stated goal) and reflect them back like a warm, forward-looking coach. It never diagnoses, never speculates about feelings or psychology - it only reflects observed behavior, with cited evidence.
 
-**The demo is the product:** open the app pre-seeded with 5 days of a fake persona's check-ins (an escalating "I'll do it tomorrow" pattern for launching a jewelry side business). The feed shows days 1-3 with warm, no-pattern responses, then day 4 and day 5 visually flagged as pattern-detected (distinct border/color) with the agent naming the exact evidence. Then, live and unscripted, a judge or Rohith types a NEW check-in into the box and watches the agent reason over the full history in real time and respond - proving it's not scripted.
+**The demo is the product:** open the app pre-seeded with 5 days of a fake persona's check-ins (an escalating "I'll do it tomorrow" pattern for launching a sneaker reselling side business). The feed shows days 1-3 with warm, no-pattern responses, then day 4 and day 5 visually flagged as pattern-detected (distinct border/color) with the agent naming the exact evidence. Then, live and unscripted, a judge or Rohith types a NEW check-in into the box and watches the agent reason over the full history in real time and respond - proving it's not scripted.
 
 ## Repository structure
 ```
