@@ -36,4 +36,4 @@ def load_onboarding_system_prompt() -> str:
 
 def load_checkin_system_prompt() -> str:
     md = CHECKIN_PROMPT_FILE.read_text(encoding="utf-8")
-    return _extract_fenced_block(md, 'You are "The Mirror"')
+    return _extract_fenced_block(md, 'You are "The Mirror')
