@@ -44,5 +44,5 @@ service serves both the API and the frontend.
 
 ## Configuration
 - `ANTHROPIC_API_KEY` (required) — the only secret.
-- `CLAUDE_MODEL` (optional, default `claude-3-5-haiku-latest`).
+- `CLAUDE_MODEL` (optional, default `claude-haiku-4-5-20251001`).
 - `MIRROR_DB_PATH` (optional, default `db/checkins.db`).

@@ -33,5 +33,5 @@ DEMO_USER_ID = "demo_user"
 DB_PATH = Path(os.environ.get("MIRROR_DB_PATH", str(DB_DIR / "checkins.db")))
 
 # Fast/cheap current model - latency matters since /checkin runs live in the demo.
-CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-3-5-haiku-latest")
+CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-haiku-4-5-20251001")
 CLAUDE_MAX_TOKENS = int(os.environ.get("CLAUDE_MAX_TOKENS", "1024"))
