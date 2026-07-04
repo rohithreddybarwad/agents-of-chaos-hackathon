@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Mirror</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="goal-banner" id="goal-banner">
+      <div class="goal-banner__inner">
+        <div class="goal-banner__label">THE MIRROR &middot; DAILY ACCOUNTABILITY COACH</div>
+        <h1 class="goal-banner__goal" id="goal-text">Loading goal&hellip;</h1>
+        <div class="goal-banner__meta">
+          <span class="goal-chip" id="success-signal"></span>
+          <span class="goal-chip goal-chip--muted" id="review-cadence"></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="feed" id="feed" aria-live="polite">
+      <div class="feed__empty" id="feed-empty">Loading check-ins&hellip;</div>
+    </main>
+
+    <footer class="composer">
+      <div class="composer__inner">
+        <textarea
+          id="checkin-input"
+          class="composer__input"
+          rows="1"
+          placeholder="Type today's check-in&hellip;"
+          autocomplete="off"
+        ></textarea>
+        <button id="send-btn" class="composer__send" type="button">Send</button>
+      </div>
+      <div class="composer__error" id="composer-error" hidden></div>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

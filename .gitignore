@@ -7,3 +7,9 @@ build/
 *.db
 .DS_Store
 .venv/
+
+# Bundled asset copies created by backend/bundle_assets.sh for deploy
+/backend/prompts/
+/backend/data/
+/backend/frontend/
+/backend/db/
