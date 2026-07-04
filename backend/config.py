@@ -8,10 +8,19 @@ from pathlib import Path
 BACKEND_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BACKEND_DIR.parent
 
-PROMPTS_DIR = REPO_ROOT / "prompts"
-DATA_DIR = REPO_ROOT / "data"
-DB_DIR = REPO_ROOT / "db"
-FRONTEND_DIR = REPO_ROOT / "frontend"
+
+def _resolve_asset_dir(name: str) -> Path:
+    """Locate an asset dir either bundled in /backend (deploy) or at repo root (dev)."""
+    bundled = BACKEND_DIR / name
+    if bundled.is_dir():
+        return bundled
+    return REPO_ROOT / name
+
+
+PROMPTS_DIR = _resolve_asset_dir("prompts")
+DATA_DIR = _resolve_asset_dir("data")
+DB_DIR = BACKEND_DIR / "db" if (BACKEND_DIR / "prompts").is_dir() else REPO_ROOT / "db"
+FRONTEND_DIR = _resolve_asset_dir("frontend")
 
 SEED_FILE = DATA_DIR / "seed_checkins.json"
 ONBOARDING_PROMPT_FILE = PROMPTS_DIR / "onboarding_prompt.md"

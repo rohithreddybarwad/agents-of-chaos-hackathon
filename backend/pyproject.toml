@@ -1,0 +1,20 @@
+[project]
+name = "the-mirror"
+version = "0.1.0"
+description = "The Mirror - a habit/accountability coach agent (FastAPI + Claude)"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.34.0",
+    "anthropic==0.42.0",
+    "pydantic==2.10.4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.4",
+    "httpx==0.28.1",
+]
+
+[tool.setuptools]
+py-modules = ["main", "db", "claude", "config", "prompts_loader"]
